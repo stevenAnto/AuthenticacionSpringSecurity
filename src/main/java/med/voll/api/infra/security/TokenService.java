@@ -40,7 +40,9 @@ public class TokenService {
     }
 
     public String getSubject(String token) {
-        System.out.println("entro a getSubhect con token "+token);
+        if(token==null){
+            throw  new RuntimeException();
+        }
         DecodedJWT decodedJWT=null;
         try {
             System.out.println("entro a try");

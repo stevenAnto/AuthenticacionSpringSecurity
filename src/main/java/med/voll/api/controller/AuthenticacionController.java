@@ -34,7 +34,7 @@ public class AuthenticacionController {
 
         //si todo ok
         var JWTtoken = tokenService.generarToken((Usuario) userAuthenticated.getPrincipal());
-        System.out.println("se genero tu token");
+        System.out.println("se genero tu token: "+JWTtoken);
         return  ResponseEntity.ok(new DTOJWTtoken(JWTtoken));
     }
 }
